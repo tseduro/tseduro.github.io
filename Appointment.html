@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 80 Barbeshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="Homepage.html">Section 80 Barbershop</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto"> 
+          <li class="nav-item active">
+            <a href="Homepage.html" class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="Location.html" class="nav-link" href="#">Location</a>
+          </li>
+          <li class="nav-item">
+            <a href="Team.html" class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="Contact.html" class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Booking Section -->
+  <section class="container">
+    <h1 class="text-center mt-5">Book Appointment</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h2 class="mb-4">Booking Appointment</h2>
+          <form>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+              <label for="time">Time</label>
+              <input type="time" class="form-control" id="time">
+            </div>
+            <div class="form-group">
+              <label for="staff">Staff</label>
+              <select class="form-control" id="staff">
+                <option>Select Staff</option>
+                <option>Staff 1</option>
+                <option>Staff 2</option>
+                <option>Staff 3</option>
+                <option>Staff 4</option>
+                <option>Staff 5</option>
+                <option>Staff 6</option>
+                <option>Staff 7</option>
+                <option>Staff 8</option>
+                <option>Staff 9</option>
+                <option>Staff 10</option>
+                <option>Staff 11</option>
+                <option>Staff 12</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select class="form-control" id="service">
+                <option>Select Service</option>
+                <option>Haircut</option>
+                <option>Beard</option>
+                <option>Locs</option>
+              </select>
+            </div>
+            <a href="clientInfo.html" class="btn btn-primary">Register Appointment</a>
+          </form>
+        </div>
+      </div>
+  </section>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Get form data and redirect to Confirmation.html
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      var formData = new FormData(this); // Get form data
+      var bookingDetails = "Confirmation.html";
+      for (var pair of formData.entries()) {
+        bookingDetails += pair[0] + "=" + pair[1] + "&"; // Concatenate form data
+      }
+      window.location.href = Confrimation.slice(0, -1); // Redirect to booking-details.html
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p>&copy; 2024 Barbershop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
